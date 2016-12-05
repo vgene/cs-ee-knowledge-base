@@ -4,5 +4,5 @@
 * [What is XYZ?](first-question.md)
 * [How can I do X?](second-question.md)
 * [GPU](gpu.md)
-* [Iot&CPS.md](iot&cpsmd.md)
+* [Iot&CPS](iot&cpsmd.md)
 
