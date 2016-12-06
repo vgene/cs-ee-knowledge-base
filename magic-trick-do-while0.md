@@ -1,4 +1,4 @@
-Magic Trick: do {...} while(0)
+# Magic Trick: do {...} while(0)
 
 When doing macro expansion, we want to use it just like a function call.
 For example,
@@ -58,7 +58,7 @@ else
 	bar(x,y);
 ```
 
--->
+Expand-->
 
 ```cpp
 if (condition)
@@ -66,6 +66,10 @@ if (condition)
 else
 	bar(x,y);
 ```
+
+
+
+
 
 or if you omit brackets
 
