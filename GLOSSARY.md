@@ -1,0 +1,6 @@
+# Glossary
+
+OS
+
+Organizaition
+o
