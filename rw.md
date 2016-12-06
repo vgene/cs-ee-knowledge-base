@@ -18,7 +18,7 @@ Readers-Writers Problems are a group of common computing problems in concurrency
 
 
 
-{%ace edit=true, lang='c_cpp' theme=monokai%}
+{%ace edit=true, lang='c_cpp'%}
 semaphore resource=1;
 semaphore mutex=1;
 readcount=0;
