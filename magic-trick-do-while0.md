@@ -1,102 +1,105 @@
-# Magic Trick: do {...} while(0)
+# Magic Trick: do {...} while\(0\)
 
-When doing macro expansion, we want to use it just like a function call.
+When doing macro expansion, we want to use it just like a function call.  
 For example,
 
-**Right Example**
+_**Right Example**_
 
 ```cpp
 //define a helper macro here
-#define foo(x,y)		\
-	do{			    	\
-		func1(x,y);		\
-		func2(x,y);		\
-	}while(0)
+#define foo(x,y)        \
+    do{                    \
+        func1(x,y);        \
+        func2(x,y);        \
+    }while(0)
 
 //use it
 
 if (condition)
-	foo(x,y); //just like a function call
+    foo(x,y); //just like a function call
 else
-	bar(x,y);
+    bar(x,y);
 ```
 
 This section will be expanded as:
 
 ```cpp
 if (condition)
-	do{	func1(x,y); func2(x,y);}while(0);
+    do{    func1(x,y); func2(x,y);}while(0);
 else
-	bar(x,y);
+    bar(x,y);
 ```
+
 which logically equals to
 
 ```cpp
 if (condition){
-	func1(x,y);
-	func2(x,y);
+    func1(x,y);
+    func2(x,y);
 }
 else
-	bar(x,y);
+    bar(x,y);
 ```
 
-However, if we don't use "do ... while(0)", what we get as following:
-**Wrong Example 1**
+However, if we don't use "do ... while\(0\)", what we get as following:  
+~~**Wrong Example 1**~~
+
 ```cpp
 //define a helper macro here
-#define foo(x,y)		\
-	{			    	\
-		func1(x,y);		\
-		func2(x,y);		\
-	}
+#define foo(x,y)        \
+    {                    \
+        func1(x,y);        \
+        func2(x,y);        \
+    }
 
 //use it
 
 if (condition)
-	foo(x,y); //just like a function call
+    foo(x,y); //just like a function call
 else
-	bar(x,y);
+    bar(x,y);
 ```
 
-Expand-->
+Expand--&gt;
 
 ```cpp
 if (condition)
-	{func1(x,y);func2(x,y);}; \\one extra semicolon which makes no sense
+    {func1(x,y);func2(x,y);}; \\one extra semicolon which makes no sense
 else
-	bar(x,y);
+    bar(x,y);
 ```
 
+Which generates compiling time error.
 
-
-
+---
 
 or if you omit brackets
 
-**Wrong Example 2**
+~~**Wrong Example 2**~~
 
 ```cpp
 //define a helper macro here
-#define foo(x,y)		\
-		func1(x,y);		\
-		func2(x,y);
+#define foo(x,y)        \
+        func1(x,y);        \
+        func2(x,y);
 
 //use it
 
 if (condition)
-	foo(x,y); //just like a function call
+    foo(x,y); //just like a function call
 else
-	bar(x,y);
+    bar(x,y);
 ```
 
--->
+--&gt;
 
 ```cpp
 if (condition)
-	func1(x,y);
-	func2(x,y);
+    func1(x,y);
+    func2(x,y);
 else
-	bar(x,y);
+    bar(x,y);
 ```
 
 which generates wrong code.
+
