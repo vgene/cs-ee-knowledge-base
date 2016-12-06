@@ -1,6 +1,8 @@
 {
     "plugins": [
         "theme-faq",
-        "ace"
-    ]
+        "ace",
+        "highlight"
+    ],
+    "pluginsConfig": {}
 }
