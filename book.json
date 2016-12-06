@@ -2,7 +2,8 @@
     "plugins": [
         "theme-faq",
         "ace",
-        "highlight"
+        "highlight",
+        "disqus"
     ],
     "pluginsConfig": {}
 }
