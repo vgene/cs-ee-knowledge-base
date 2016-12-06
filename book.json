@@ -5,5 +5,10 @@
         "highlight",
         "disqus"
     ],
-    "pluginsConfig": {}
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "lalala",
+            "useIdentifier": true
+        }
+    }
 }
