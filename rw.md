@@ -16,7 +16,9 @@ Readers-Writers Problems are a group of common computing problems in concurrency
 
 **First RW Problem**
 
-```cpp
+
+
+{%ace edit=true, lang='c_cpp' theme=monokai%}
 semaphore resource=1;
 semaphore mutex=1;
 readcount=0;
@@ -57,7 +59,5 @@ reader() {
     <EXIT CRITICAL Section>
     mutex.V();//Release
 }
-```
-
-
+{%endace%}
 
