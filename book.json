@@ -2,13 +2,7 @@
     "plugins": [
         "theme-faq",
         "ace",
-        "highlight",
-        "disqus"
+        "highlight"
     ],
-    "pluginsConfig": {
-        "disqus": {
-            "shortName": "lalala",
-            "useIdentifier": true
-        }
-    }
+    "pluginsConfig": {}
 }
