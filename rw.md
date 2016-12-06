@@ -16,20 +16,7 @@ Readers-Writers Problems are a group of common computing problems in concurrency
 
 **First RW Problem**
 
-
-{%ace edit=true, lang='c_cpp', theme="monokai" %}
-// This is a hello world program for C.
-#include <stdio.h>
-
-int main(){
-  printf("Hello World!");
-  return 1;
-}
-{%endace%}
-
-
-
-{%ace edit=true, lang='c_cpp'%}
+{%ace edit=false, lang='c_cpp', theme="monokai" %}
 
 semaphore resource=1;
 semaphore mutex=1;
