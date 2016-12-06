@@ -10,9 +10,9 @@ Readers-Writers Problems are a group of common computing problems in concurrency
 2. Second RW problem \(Writers-preference\)
 3. Third RW problem \(no starvation\)
 
-## CPP Implementation {#implementation}
+## C++ Implementation {#implementation}
 
-[Ref. Wikipedia - Readers–writers problem](https://en.wikipedia.org/wiki/Readers–writers_problem "Implementations from Wikipedia")
+[Ref. Wikipedia - Readers–Writers problem](https://en.wikipedia.org/wiki/Readers–writers_problem "Implementations from Wikipedia")
 
 **First RW Problem**
 
