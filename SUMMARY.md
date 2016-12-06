@@ -13,13 +13,7 @@
 
 ## Programming Language
 
-### Magic Tricks
-
 * [Magic Trick of Macro: Do {...} while(0)](/magic-trick-do-while0.md)
-
-
-
-
 
 
 
